@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dang ki</title>
+</head>
+<body>
+	<div class="form">
+		<form >
+		<table>
+		<h1>Nhập thông tin đăng kí</h1>
+			<tr>
+				<td>Tên đăng nhập:</td>
+				<td><input type="text" id="name"></td>
+			</tr>
+			<tr>
+				<td>Mật khẩu:</td>
+				<td><input type="password" id="password"></td>
+			</tr>
+			<tr>
+				<td>Nhập lại mật khẩu:</td>
+				<td><input type="password" id="passwordrepeat"></td>
+			</tr>
+			<tr>
+				<td>Họ và tên:</td>
+				<td><input type="text" id="hoten"></td>
+			</tr>
+			<tr>
+				<td>giới tính</td>
+				<td> Nam: <input type="radio" id="nam"> Nữ: <input type="radio" id="nu"></td>
+			</tr>
+			<tr>
+				<td>Ngày sinh</td>
+				<td><input type="date" id="date"></td>
+			</tr>
+			<tr>
+				<td>Nghề nghiệp</td>
+				<td><select name="job" id="job">
+					<option value="teacher">Giaso viên</option>
+					<option value="doctor">Bác sĩ</option>
+					<option value="singer">Ca sĩ</option>
+					<option value="worker">Công nhân</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Điện thoại:</td>
+				<td><input type="text" id="telephone"></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" id="email"></td>
+			</tr>
+			<tr>
+				<td>Ghi chú:</td>
+				<td><textarea name="ghichu"  cols="30" rows="5" id="ghichu"></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button type="button" onclick="click10();">Đồng ý</button></td>
+			</tr>
+			</table>
+		</form>
+		<p id="hienthithongtin"></p>
+
+	</div>
+	<script type="text/javascript">
+		function the(id){
+			var i=document.getElementById(id).value;
+			return i;
+		};
+	function click10(){
+			//var kq="";
+			var a=the('name');
+			var b=the('password');
+			var c=the('passwordrepeat');
+			var d=the('hoten');
+			var kq="";
+			kq=kq+"học và tên: " +a;
+			document.getElementById('hienthithongtin').innerHTML=kq;
+
+			// var b=document.getElementById('').value;
+			// var =document.getElementById('').value;
+			// var =document.getElementById('').value;
+			// var =document.getElementById('').value;
+			// var =document.getElementById('').value;
+			
+		};
+		
+	</script>
+</body>
+</html>

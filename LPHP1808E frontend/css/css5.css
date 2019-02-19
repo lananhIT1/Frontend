@@ -1,0 +1,34 @@
+*{
+	margin:0;
+	padding: 0;
+}
+div.box{
+	/*margin-left:500px;*/
+	width: 100px;
+	height: 200px;
+	border: 1px solid red;
+	transition: all 10s ease 0s;
+	position: relative;
+	-webkit-transition: all 10s ease 0s;
+	transform: rotate(30deg);
+	opacity:1;
+	animation: myAnimation 10s ease 0s infinite alternate;
+	-webkit-animation: myAnimation 10s ease 0s infinite alternate;
+	
+}
+div.box:hover{
+	/*width: 600px;
+	height: 600px;*/
+	/*transform: rotate(75deg);*/
+	opacity: 0;
+}
+@keyframes myAnimation{
+	from{left:0px;}
+	to{left:500px;}
+	
+	/*from{top:0px;}
+	to{right:500px;}
+	from{right:0px;}
+	to{top:500px;}*/
+
+}

@@ -1,0 +1,154 @@
+*{
+	padding:0;
+	border:0;
+	margin:0;
+}
+body{
+	font-family: tahoma;
+}
+#header,#nav,#maincontent,#footer{
+	margin: 0 auto;
+	border: 1px solid #8C0209;
+}
+#footer {
+	width:1000px;
+}
+
+#header{
+	width:1000px;
+	height:100px;
+	background-color: white;
+	border: 1px solid #8C0209;
+	margin: 0 auto;
+
+}
+.form{
+	width:40%;
+	height:100px;
+
+}
+.form input{
+	width:100px;
+	height:20px;
+	border:1px solid black;
+	margin-top:25px;
+}
+.form button{
+	background-color:red;
+	color:white;
+	width:50px;
+	height:30px;
+	border-radius: 5px;
+}
+#header img{
+	width:100px;
+	height:100px;	
+}
+#header .form,#header #shop{
+	float:left;
+}
+#header #shop{
+	height:100px;
+	width:60%;
+}
+#nav{
+	width:1000px;
+	height:50px;
+	background-color: red;
+	border: 1px solid #8C0209;
+	border-radius:20px 0px;
+
+}
+div.nav1,div.nav2{
+	float:left;
+}
+div.nav1{
+	width:60%;
+}
+div.nav2{
+	width:40%;
+}
+div.nav2 input{
+	margin-top:20px;
+}
+#nav ul{
+	text-align: left;
+}
+#nav ul li{
+	display:inline-block;
+	line-height:50px;
+	list-style: none;
+	padding-right:10px;
+}
+ li a{
+	text-decoration:none;
+	color:white;
+}
+#nav ul li:hover{
+	background-color: white;
+}
+#nav ul li:hover a{
+	color:red;
+}
+#maincontent{
+	width:1000px;
+}
+#maincontent #mainleft,#mainright{
+	float:left;
+}
+#maincontent #mainleft{
+	width:220px;
+	
+}
+#maincontent #mainright{
+	width:780px;
+}
+#mainleft11{
+	height:30px;
+	width:220px;
+}
+#mainleft11,#maincontent #mainleft2 #mainleft21,#mainleft31{
+	border: 1px solid #8C0209;
+	background-color: red;
+	border-radius: 12px 0px;
+	color:white ;
+	text-align: center;
+}
+#mainleft2{
+	padding-top:10px;                                                                                
+
+}
+
+#mainleft22{
+	/*border: 1px solid #8C0209;*/
+	height:80px;
+}
+#maincontent #mainleft12 ul li{
+	display:block;
+	border-bottom:1px dotted red;
+	text-align: center;
+	line-height:40px;
+}
+#mainleft12 a{
+	color:red;
+	text-align: center;
+}
+#mainleft3{
+	padding-top:10px;
+}
+div#mainright1{
+	width:780px;
+	height:400px;
+
+}
+div.mainright22 div.img{
+	width:780px;
+	height:100px;
+}
+div#mainright21{
+	background-color: red;
+	height:20px;
+}
+#footer{
+	background-color: red;
+}

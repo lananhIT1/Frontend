@@ -1,0 +1,16 @@
+img{
+	width:200px;
+	height:200px;
+}
+ol {
+	margin-left: 200px;
+
+}
+ol > li:nth-child(1) ul:nth-child(2){
+	list-style-type: square;
+}
+div:last-child{
+	margin-left: 200px;
+	background-color: violet;
+	width: 500px;
+}

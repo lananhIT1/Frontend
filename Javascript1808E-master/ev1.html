@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo Event tron js</title>
+</head>
+<body onerror="myOnError();" onload="myOnLoad();" onresize="myResize();">
+	<button type="button" onclick="myClick('LPHP1808E');">Click me</button>
+	<br>
+	<input type="text" onblur="myBlur();" onfocus="myFocus();">
+	<br>
+	<input type="text" onchange="myChange(this);">
+	<br>
+	<select onchange="myChange2(this);">
+		<option value="0"> Nam</option>
+		<option value="1"> Nu</option>
+	</select>
+	<br>
+	<button type="button" ondblclick="myDbClick(this);"> dbClick me</button>
+	<br>
+	<input type="text" onkeydown="myKeydown();" onkeypress="myKeyPress();" onkeyup="myKeyUp();">
+	<br>
+	<button type="button" onmousedown="myMouseDown();" onmouseup="myMouseUp();"> mouse click</button>
+	<br>
+	<div style="width: 200px; height: 200px; border: 1px solid red;" onmousemove="myMouseMove();">
+	</div>
+	<br>
+	<img src="images/test.jpg" width="200" height="200" onmouseout="myMouseOut(this);" onmouseover="myMouseOver(this);">
+	<br>
+	<textarea rows="5" cols="50" onselect="mySelect();"></textarea>
+
+	<script type="text/javascript">
+		window.onbeforeunload = function(){
+			return "eixts";
+		}
+		function mySelect(){
+			console.log('van ban vua dc chon (boi den :D )');
+		}
+		function myResize(){
+			alert('cua so vua dc thay doi');
+		}
+		function myMouseUp(){
+			console.log('ban vua nha chuot ra');
+		}
+		function myMouseOver(ob){
+			ob.width = 500;
+			ob.height = 500;
+		}
+		function myMouseOut(ob){
+			ob.width = 50;
+			ob.height = 50;
+		}
+
+		function myMouseMove(){
+			console.log('chuot vua dc di chuyen');
+		}
+
+		function myMouseDown(){
+			console.log('ban vua bam chuot');
+		}
+		function myOnLoad(){
+			console.log('trang web vua dc tai xong');
+		}
+		function myKeydown(){
+			console.log('ban vua bam ban phim');
+		}
+		function myKeyPress(){
+			console.log('ban dang giu ban phim');
+		}
+		function myKeyUp(){
+			console.log('ban vua bo tay khoi ban phim');
+		}
+
+		function myOnError(){
+			console.log('loi trang ko tai dc');
+		}
+		function myDbClick(ob){
+			console.log(ob);
+		}
+
+		function myChange2(ob){
+			let gender = ob.value;
+			if(gender == 1){
+				console.log('ban la nu');
+			} else if(gender == 0){
+				console.log('ban la nam');
+			} else {
+				console.log('khong xac dinh');
+			}
+		}
+		function myChange(obj){
+			let valuText = obj.value;
+			console.log(valuText);
+		}
+		function myClick(name){
+			alert('Hello word' + name);
+		}
+		function myBlur(){
+			console.log('this is action blur');
+		}
+		function myFocus(){
+			console.log('this is action focus');
+		}
+	</script>
+</body>
+</html>

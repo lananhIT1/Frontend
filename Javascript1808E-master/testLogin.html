@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JS</title>
+</head>
+<body>
+	<div class="container">
+		<form id="frmLogin">
+			<div class="form-group">
+				<label for="user">User</label>
+				<input type="text" name="user" id="user">
+				<p class="error" id="errUser"></p>
+			</div>
+			<div class="form-group">
+				<label for="pass">Password</label>
+				<input type="password" name="pass" id="pass">
+				<p class="error" id="errPass"></p>
+			</div>
+			<button type="button" id="login" class="btn"> Login </button>
+		</form>
+	</div>
+	<script type="text/javascript">
+		// bat su kien nguoi dung bam nut login
+		document.getElementById('login').onclick = function(){
+			// can lay duoc thong tin ma nguoi dung nhap vao 2 o text - user va pass
+			let domUser = document.getElementById('user');
+			let domPass = document.getElementById('pass');
+			let domErrUser = document.getElementById('errUser');
+			let domErrPass = document.getElementById('errPass');
+
+			let user = domUser.value;
+			let pass = domPass.value;
+			let chkUser = null;
+			let chkPass = null;
+			if(user == ''){
+				chkUser = false;
+				// thong bao loi cho o text nay
+				domUser.style.border = '1px solid red';
+				domErrUser.innerHTML = 'Vui long nhap username';
+			} else {
+				chkUser = true;
+				domUser.style.border = '';
+				domErrUser.innerHTML = '';
+			}
+			if(pass == ''){
+				chkPass = false;
+				// thong bao loi cho o text nay
+				domPass.style.border = '1px solid red';
+				domErrPass.innerHTML = 'Vui long nhap username';
+			} else {
+				chkPass = true;
+				domPass.style.border = '';
+				domErrPass.innerHTML = '';
+			}
+
+			if(chkUser && chkPass){
+				// nguoi dung co nhap username va password
+				//document.getElementById('frmLogin').submit();
+				window.location.href = 'index3.html';  
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>

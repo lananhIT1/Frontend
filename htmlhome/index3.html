@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ Email: <input type="text" id="name"/>
+  <button type="button" id="btnclick" onclick="click1();">Đăng nhập</button>
+  <p id="hienthi"></p>
+  <script type="text/javascript">
+  	var a=document.getElementById('btnclick');
+	
+	function click1(){
+		var b=document.getElementById('name').value;
+		console.log(b);
+  		if(b.indexOf('@')!==-1){
+    		alert('moi ban nhap lai');
+  		}
+//    if(b!=''&& b.indexOf('@')!=-1 && b.indexOf('.')!=-1){  
+//    alert('ok');
+// }
+};
+  </script>
+</body>
+</html>

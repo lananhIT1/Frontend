@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body{
+	font-family: tohoma;
+	font-size: 18px;
+}
+
+nav{
+	background-color: #78B43D;
+	width: 100%;
+	height:35px;
+}
+nav ul li a{
+	text-decoration: none;
+   color:white;
+}
+nav ul{
+  text-align:center;
+  padding-top: 7px;
+}
+nav ul li{
+	display: inline;
+/* 	margin-left:-5px; */
+	padding:15px 10px;
+	list-style: none;
+	text-align: center;
+  position:relative;
+}
+nav ul.lananh>li>a{
+  border-right:1px solid white;
+  padding-right:15px; 
+
+  
+}
+nav ul li:last-child{
+	border:none;
+
+}
+nav ul li:hover{
+     background-color: #78B43D;
+}
+nav ul li ul a{
+  color:black;
+}
+
+nav ul.danhmuc{
+  display: none;
+  position:absolute;
+  left:0px;
+  top:42px;
+  background-color:#AAD862;
+  width: 135px;
+  border-right:none;
+  
+}
+nav li>ul.danhmuc li {
+  display:block;
+   border-bottom: 1px solid #78B43D;
+}
+nav  ul li:hover>ul.danhmuc{
+  display:block;
+}
+
+nav ul.danhmuc li:hover{
+  background-color:#78B43D;
+  
+}
+nav ul.danhmuc li:hover a{
+  color:white;
+}
+
+nav li ul.danhmuc li ul.danhmuc:nth-child(2)
+{
+	top:0px;
+	left:135px;
+}
+

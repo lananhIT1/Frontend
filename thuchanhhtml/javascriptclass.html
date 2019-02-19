@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="css/javascriptclass.js"></script>
+	<style type="text/css">
+		#maytinh{
+			width:400px;
+			height:200px;
+			background-color: gray;
+			margin:auto;
+		}
+		.nhan{
+			font-size: 18px;
+			font-weight: bold;
+			color:white;
+			text-align: right;
+		}
+		.dulieu{
+			font-size: 18px;
+
+		}
+		.cangiua{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div id="maytinh">
+	<table width="100%" border="0" cellspacing="5px">
+		<tr>
+			<td class="nhan">Num1:</td>
+			<td><input type="text" id="num1" name="num1" class="dulieu">
+			</td>
+		</tr>
+		<tr>
+			<td class="nhan">Num2:</td>
+			<td><input type="text" id="num2" name="num2" class="dulieu"></td>
+		</tr>
+		<tr>
+			<td class="nhan">Result:</td>
+			<td><input type="text" id="result" name="result" class="dulieu"></td>
+		</tr>
+		<tr>
+			<td class="nhan">operator</td>
+			<td>
+				<label for="add" class="nhan">Add</label>
+				<input type="radio" id="add" name="operator" checked="true" >
+				<label for="sub" class="nhan">Sub</label>
+				<input type="radio" id="sub" name="operator" checked="true">
+			</td>
+		</tr>
+		<tr>
+			<td class="cangiua" colspan="2">
+				<button type="button" onclick="calc()">Calculate</button>
+				<button type="button" onclick="clr()">Clear</button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

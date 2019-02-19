@@ -1,0 +1,25 @@
+
+.title{
+	color:green;
+}
+h1.title{
+	color:blue;
+}
+
+
+input[type='email']{
+	border:1px solid blue;
+}
+input[type] {
+	border: 1px solid red;
+	}
+input[class~="myinput"]{
+	border: 1px solid pink;
+}
+input[class^='in']{
+    border: 1px solid violet;
+}
+input[class$='ut']{
+    border: 1px solid orange;
+}
+

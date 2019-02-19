@@ -1,0 +1,29 @@
+*{
+	padding:0;
+	border:0;
+	margin:0;
+}
+body{
+	font-family: tahoma;
+}
+div.nav{
+	background-color: #125A6C;
+	height:25px;
+}
+div.nav ul.nav1{
+	text-align: right;
+}
+div.nav li {
+	font-size: 14px;
+	padding-right: 10px;
+	line-height: 25px;
+}
+div.header{
+	background-color: #003E52; 
+	height:91px;
+}
+div.header .img{
+	margin:15px; 
+	width:123px;
+    height:45px;
+}

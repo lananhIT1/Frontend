@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1>demo jq</h1>
+<button id="btnClick">Click me</button>
+<button id="btnClick2">Click me 2</button>
+<div class="content" style="width:300px; height:300px; border: 1px solid red;"></div>
+<button id="btnTime">Time-Start</button>
+<h3 id="time"></h3>
+<button id="btnStop">Stop</button>
+<script type="text/javascript">
+	let time=0;
+	let myTime;
+	// let myTime=setInterval(function(){
+	// 	time+=1;
+	// 	console.log(time);
+	// },1000);//setInterval:hành động lặp đi lặp lại mãi mãi
+	// let myTime=setTimeout(function(){//setTimeout:thực thi mãi mãi nhưng chỉ 1 lần
+	// 	time+=1;
+	// 	console.log(time);
+	// },1000);
+	$(function(){
+		$('#btnTime').click(function(){
+			 myTime=setInterval(function(){
+	 			time+=1;
+	 			$('#time').html(time);
+	 		},1000);
+		});
+		$('#btnStop').click(function(){
+			clearInterval(myTime);//clearInterval:dừng
+		});
+		$('#btnClick').click(function(){
+			 //$('.content').fadeOut(500);
+			 //$('.content').hide(500);
+			 //$('.content').slideUp(5000);
+			//slideup chỉ thay đổi height,hide thay đổi width và height
+			 //$('.content').slideToggle(5000);//toggle đủ tính chất của hàm trên
+			$('.content').fadeToggle(5000);
+		});
+		$('#btnClick2').click(function(){
+			 //$('.content').fadeIn(500);
+			 //$('.content').show(5000);
+			 //$('.content').slideDown(5000);
+		});
+	});
+</script>
+</body>
+</html>

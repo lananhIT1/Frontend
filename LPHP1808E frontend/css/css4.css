@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+div.box{
+	width: 200px;
+	height: 80px;
+	border: 1px solid red;
+	/*overflow: hidden;*/
+	/*overflow: scroll;*/
+	overflow: auto;
+}
+ div.box p{
+	width:  300px;
+}
+div.container{
+	width: 980px;
+	margin: 20px auto;
+	border: 1px solid red;
+}
+div.container div.child-1{
+	width: 50%;
+	float: left;
+	background-color: green;
+	height:500px;
+}
+div.container div.child-2{
+	width: 50%;
+	float: left;
+	background-color: pink;
+	height:500px;
+}
+div.container div.child-2{
+	background:violet;
+	background: linear-gradient( to bottom,blue,yellow,red,orange);
+	background: -moz-linear-gradient( to bottom,blue,yellow,red,orange);/*firefox*/
+	background: -webkit-linear-gradient( to bottom,blue,yellow,red,orange);
+	background: -o-linear-gradient( to bottom,blue,yellow,red,orange);/*opera*/
+	background: -ms-linear-gradient( to bottom,blue,yellow,red,orange);/*mcrosoft*/
+
+}
+/*css reponsive*/
+@media only all and (min-width: 425px) and (max-width: 767px){
+	div.container div.child-1,div.child-2{
+		width: 100%;
+		float:none;
+	}
+	 div.container div.child-1 img{
+		display: none;
+	}
+	div.container div.child-1{
+		background-color: yellow;
+	}
+	div.container div.child-2{
+		background-color: violet;
+	}
+}
+.clear{
+	clear:left;
+}
+div.content{
+	width: 200px;
+	height:200px;
+	background-color: green;
+	transform: translate(300px, 300px);
+	transform: rotate(45deg);
+	transform: scale(3,3);nhaan kich thuoc len 3
+	transform: skew(30deg, 55deg);
+}

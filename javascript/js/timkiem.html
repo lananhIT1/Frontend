@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo search</title>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<input class=" form-control mt-3" type="text" id="searchData" placeholder="enter data">
+				<br>
+				<table class="table mt-3">
+					<thead>	
+						<tr>
+							<th>Mã sv</th>
+							<th>Họ tên</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<td>113</td>
+							<td>Nguyen van A</td>
+						</tr>
+						<tr>
+							<td>114</td>
+							<td>Nguyen van B</td>
+						</tr>
+						<tr>
+							<td>115</td>
+							<td>Nguyen van C</td>
+						</tr>
+						<tr>
+							<td>116</td>
+							<td>Nguyen van D</td>
+						</tr>
+						<tr>
+							<td>117</td>
+							<td>Nguyen van E</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			//bat su kien ng dung nhap dl
+			$('#searchData').keyup(function(){
+				let data=$(this).val().trim();
+				//console.log(data);
+				//kiem tra xem dl ma nguoi dung nhap co ton tai trong bang hay ko
+				$('table tbody tr').each(function(){//duyet all cac tr trong bang
+					let msv=$(this).find('td:first').text().trim();
+					let ht=$(this).find('td:first').next().text();
+					console.log(msv,ht);
+					//kiemtra du lieu nhap co nam trong dl table hay khong
+					if(data.indexOf(msv)!=-1|| data.indexOf(ht) !=-1){
+						$(this).show();
+
+					}else{
+						if(data===''){
+							$(this).show();
+						}else{
+							$(this).hide();
+						}
+					}
+
+				});
+			})
+		})
+	</script>
+</body>
+</html>

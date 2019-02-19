@@ -1,0 +1,73 @@
+*{
+	margin:0;
+	padding:0;
+}
+h1.title{
+	color:blue;
+}
+.title{
+	color:green;
+}
+#mytitle{
+	color:yellow;
+}
+/*id đc ưu tiên nhất id-->class-->html*/
+input[type] {
+	border: 1px solid red;
+	}/*selector attribute*/
+input[type='email']{
+	border:1px solid blue;
+}
+/*attribute ngang hàng nhau*/
+input[class~="myinput"]{
+	border: 1px solid pink;
+}
+input[class^='in']{
+    border: 1px solid violet;
+}
+/*cho thuộc tính bắt đầu*/
+input[class$='ut']{
+    border: 1px solid orange;
+}
+/*cho thuộc tính kết thúc*/
+input[class*='my']{
+    border: 1px solid yellow;
+}
+/*~: viết đầy đủ là myinput còn * ko cần viết đầy đủ;*/
+input[name|='password'] {
+    border: 1px solid gray;
+}
+div.content  div.box-2  h4 {
+    color: blue;
+}
+
+div.content > div.box-1 ~ div.box-2 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid yellow;
+}
+div.content > div.box-1 + div.box-2 ~ div.box-3 section + article div.text p {
+    color: green;
+}
+div.a > div.b ~ div.c + div.d div.e > div.f {
+
+}
+div.a {
+    width: 500px;
+    height: 300px;
+    background-color: black;
+}
+div.b {
+    width: 500px;
+    height: 300px;
+    background-color: black;
+}
+div.c + div.d {
+    width: 500px;
+    height: 300px;
+    background-color: black;
+}
+div.b {
+    width: 300px;
+}
+

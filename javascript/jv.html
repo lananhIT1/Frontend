@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text" id="name" name="name">
+  <button type="button" id="btnClick"  onclick="clickme()">click me</button>
+  <div id="show"></div>
+
+ <script type="text/javascript">
+ 	function clickme(){
+  var a=document.getElementById('name').value;
+  	var b=a.split('');
+  	var dem=0;
+  	for(let i=0;i<a.length;i++){
+  		if((a.charCodeAt(i)>=65&&a.charCodeAt(i)<90)||b[i]==':'||b[i]=='/'){
+  			dem++;
+  		}
+  	}
+  	// console.log(a.length);
+  	// console.log(dem);
+  	if(dem==a.length){
+  		document.getElementById('show').innerHTML='ok';
+  	 }else{
+  	 	document.getElementById('show').innerHTML='err';
+  	}
+  	
+  
+  
+}
+ </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo Jquery</title>
+	<!-- se co 2 cach co ban de su dung thu vien JQ vao wb -->
+	<!-- cai dat truc tuyen -->
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script> -->
+	<!-- cai dat offline -->
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<!-- 
+		sau nay thu vien JQ nen duoc nhung dau tien nhat truoc tat ca cac file js khac.
+	-->
+	<!-- <script src="/javascripts/application.js" type="text/javascript"></script> -->
+	<style type="text/css">
+		.error{
+			border: 1px solid red;
+		}
+		.success{
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<button type="button"> Click Me </button>
+	<br>
+	<select class="gender">
+		<option value="1"> Nam </option>
+		<option value="0"> Nu </option>
+		<option value="-1"> ko XD </option>
+	</select>
+	<h1 id="10" class="title"> This is JQ</h1>
+	<input type="button" name="btnClick" value="Click me 2">
+	<br>
+	<img src="images/test.jpg" alt="">
+	<br>
+	<input type="text" name="email" id="email">
+	<button type="button" id="check"> Check</button>
+
+	<div class="content">
+		
+	</div>
+	<br>
+	<ul>
+		<li><a href="#" title="">Home</a></li>
+		<li><a href="#" title="">About</a></li>
+		<li><a href="#" title="">Contact</a></li>
+		<li><a href="#" title="">Document</a></li>
+		<li><a href="#" title="">Info</a></li>
+	</ul>
+	<br>
+	<input type="checkbox" name="checkbox">
+	<br>
+	<div class="box-2">
+		<h4>This is box-2</h4>
+	</div>
+	<div class="nav">
+		<nav>
+			<section>
+				<h3>This is test</h3>
+			</section>
+		</nav>
+	</div>
+	<div class="box">
+		<h4>This is box-3</h4>
+	</div>
+
+	<br>
+	<p id="data"></p>
+	<h6>SASSADASSDFSF</h6>
+	<textarea id="textData" cols="50" rows="5">
+		
+	</textarea>
+
+	<script type="text/javascript">
+		$(function(){
+			$('#textData').keyup(function(){
+				let dt = $(this).val().trim();
+				//$('#data').html(dt);
+				$('#data').text(dt);
+				let t = $('h6').html();
+				let t2 = $('h6').text();
+				console.log(t, t2);
+			});
+			// ham khoi tao
+			// ham nay no se cho cho cac DOM HTML duoc load xong - dung xong thi cac ma lenh JS nam o ben trong ham nay moi duoc thuc thi
+			
+			// bat su kien click cho nut click me
+			//  sau nay tat ca cac ma lenh viet theo thu vien JQ deu phai duoc dat trong nay
+			// $ ~ jQuery
+			$('button[type="button"]').click(function(){
+				//alert('Hello word');
+				//button[type="button"] : selector JQ - chinh la khai niem selector CSS
+				//let id = document.getElementById('10').id;
+				//console.log(id);
+				let id = $('#10').attr('id');
+				// attr('nameAttr'); // lay ra gia tri cua thuoc tinh
+				console.log(id);
+				let id2 = $('#10').prop('id');
+				console.log(id2);
+				//document.getElementsByTagName('input')[0].setAttribute('type', 'text');
+				$('input[name="btnClick"]').attr('type','text');
+			});
+
+			$('select[class="gender"]').change(function(){
+				//alert('abc');
+				//let gender = this.value;
+				//let gender = $(this).val();
+				//alert(gender);
+				$('h1#10').toggleClass('title');
+				if($('h1#10').hasClass('title')){
+					console.log('Y');
+				} else {
+					console.log('N');
+				}
+			});
+
+			$('input[name="btnClick"]').click(function(){
+				if($('h1#10').hasClass('title')){
+					$('img').removeAttr('src');
+				} else {
+					$('img').attr('src','images/test.jpg');
+				}
+				
+			});
+
+			$('#check').click(function(){
+				// lay dc gia tri ma nguoi dung nhap vao o text
+				let email = $('#email').val().trim();
+				if(email.length && email != ''){
+					// khong rong - co nhap dl
+					$('#email').removeClass('error');
+					$('#email').addClass('success');
+				} else {
+					// ko nhap du lieu
+					$('#email').removeClass('success');
+					$('#email').addClass('error');
+				}
+
+				// $('.content').css('width','300px');
+				// $('.content').css('height','300px');
+				// $('.content').css('border','1px solid red');
+				// $('.content').css('background-color','yellow');
+				// single css
+				// multi css
+				$('.content').css({
+					width: '300px',
+					height: '300px',
+					backgroundColor: 'yellow',
+					padding: '10px',
+					border: '5px solid red'
+				});
+
+				let wBox = $('.content').width();
+				let hBox = $('.content').height();
+				console.log(wBox, hBox);
+				let innerH = $('.content').innerHeight();
+				let innerW = $('.content').innerWidth();
+				console.log(innerW, innerH);
+
+				$('.content').width(500);
+				$('.content').height(500);
+				let wBox2 = $('.content').width();
+				let hBox2 = $('.content').height();
+				console.log(wBox2, hBox2);
+
+				$('ul li a').eq(2).css('color','red');
+
+				if($('input[type="checkbox"]').is(':checked')){
+					console.log('yes');
+				} else {
+					console.log('No');
+				}
+
+				$('div.nav').find('h1').css('color','blue');
+
+				$('div.nav').next().next().next().css({
+					width: '200px',
+					height: '200px',
+					border: '1px solid red'
+				});
+				$('div.nav').prev().prev().prev().css({
+					width: '200px',
+					height: '200px',
+					border: '1px solid red'
+				});
+
+				$('nav').parent().parent().css({
+					width: '200px',
+					height: '200px',
+					border: '1px solid red'
+				});
+			})
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+img{
+	position:absolute;
+	right:0px;
+	top:0px;
+	width: 100px;
+	height:100px;
+}
+p{
+	
+	text-align: center;
+	margin-top: 20px;
+	color:blue;
+	font-size: 40px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<h2 class="text-center">giỏ hàng</h2>
+			</div>
+		</div>
+		<div class="row">
+			<table class="table table-striped table-bordered">
+				<thead success>
+					<tr>
+						<td>#</td>
+						<td>Name</td>
+						<td>Image</td>
+						<td>QTY</td>
+						<td>Price</td>
+						<td>Money</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Samsung s9+</td>
+						<td>
+							<img src="images/anh2.jpg" alt="" width="120" height="120">
+						</td>
+						<td>
+							<input type="text" name="qty" id="qty" vale="1" class="qtyPd">
+						</td>
+						<td>1000</td>
+						<td class="money">1000</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>iphone X</td>
+						<td>
+							<img src="images/anh2.jpg" alt="" width="120" height="120">
+						</td>
+						<td>
+							<input type="text" name="qty" id="qty" vale="1" class="qtyPd">
+						</td>
+						<td>2000</td>
+						<td class="money">2000</td>
+					</tr>
+
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Total mONEY</td>
+						<td colspan="4"></td>
+						<td>500000</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+	<br>	
+	<p><i class="fa fa-soundcloud" aria-hidden="true"></i></p>
+	<script type="text/javascript">
+		let totalMoney=0;
+		function getTotalMoney(){
+			let colM =$('table > tbody> tr  td.money');
+			totalMoney=0;
+				 $(colM).each(function(index){
+				 	//console.log($(this).text());
+				 	let m=eval($(this).text().trim());
+				 	totalMoney+=m;
+				 });
+				 return totalMoney;
+		}
+		function initTotaMoney(){
+			$('table>tfoot>tr>td').eq(2).text(getTotalMoney());
+		}
+		$(function(){
+			initTotaMoney();
+			$('.qtyPd').change(function(){
+				let qty=$(this).val().trim();
+				// console.log(qty);
+				qty=eval(qty);
+				//lay don gia tương ứng của số lượng cho sản phẩm đó
+				let price=$(this).parent().next().text().trim();
+				// alert(price);
+				price=eval(price);
+				let money=qty * price;
+				//cập nhật lại cho cột Money
+				$(this).parent().next().next().text(money);
+				 // let colM= $('table > tbody> tr  td:last-child');
+				 //console.log(colM);
+				 //duyet qua tat ca cac phan tu nam trong "colM"
+				 // totalMoney=0;
+				 // $(colM).each(function(index){
+				 // 	//console.log($(this).text());
+				 // 	let m=eval($(this).text());
+				 // 	totalMoney+=m;
+				 // });
+				 //cập nhật tổng tiền
+				 // $('tfoot > tr td').eq(2).text(totalMoney);
+				 $('tfoot > tr td').eq(2).text(getTotalMoney());
+				 
+			});
+
+
+		});
+	</script>
+</body>
+</html>

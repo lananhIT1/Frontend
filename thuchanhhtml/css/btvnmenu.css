@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body{
+	font-family: tohoma;
+	font-size: 18px;
+}
+
+nav{
+	background-color: #78B43D;
+	width: 100%;
+	height:25px;
+}
+nav ul li a{
+	text-decoration: none;
+    color:white;
+   /*border-right:1px solid white;*/
+}
+nav>ul>li>a{
+	border-right:1px solid white;
+	padding-right: 20px;
+}
+nav ul{
+  text-align:left;
+  
+ 
+}
+nav ul li{
+	display: inline-block;
+	/*border-right:1px solid white;*/
+	
+	padding:0px 10px;
+	line-height: 25px;
+	/*list-style: none;*/
+	text-align: center;
+  position:relative;
+
+  
+}
+
+nav ul li:hover{
+     background-color: #78B43D;
+}
+ nav li ul.danhmuc a, nav li ul.danhmuc ul.danhmuc a{
+  color:black;
+}
+nav>ul>li:last-child{
+	border:none;
+
+}
+
+nav ul.danhmuc{
+  display: none;
+  position:absolute;
+  left:0px;
+  /*bottom: -300px;*/
+  background-color:#AAD862;
+  width: 135px;
+  border-right:none;
+  
+}
+nav li>ul.danhmuc li {
+  display:block;
+   border-bottom: 1px solid #78B43D;
+}
+nav  ul li:hover>ul.danhmuc{
+  display:block;
+}
+
+ul.danhmuc li:hover{
+  background-color:#78B43D;
+  
+}
+ul.danhmuc li:hover a{
+  color:white;
+}
+
+nav li ul.danhmuc li ul.danhmuc:nth-child(2)
+{
+	top:0px;
+	left:125px;
+}
+nav li ul.danhmuc ul.danhmuc li{
+background-color: #78B43D;
+border-bottom: 1px solid #AAD862;
+}
+ul.danhmuc li ul.danhmuc li:hover a{
+	color:white;
+}
+

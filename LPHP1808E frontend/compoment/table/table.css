@@ -1,0 +1,66 @@
+*{
+	margin:0;
+	padding: 0;
+	border: 0;
+}
+div.container{
+	width: 980px;
+	margin: 50px auto;
+}
+div.container table.table{
+	width: 100%;
+	padding:15px;
+
+}
+/*div.container table.table-border*/table{
+	border: 1px solid red;
+}
+div.container table> thead.table-bg{
+	background-color: orange;
+	line-height: 35px;
+
+}
+div.container table> thead.table-bg tr>th{
+	color:white;
+	text-align: left;
+	padding-left: 10px;
+}
+div.container table tbody tr td{
+	border-bottom: 1px solid orange;
+	padding: 6px 0px;
+	text-align: left;
+	padding-left: 10px;
+}
+div.container table.table-hover tbody>tr:hover{
+	background-color: yellow;
+}
+nav.panigation{
+	width: 100%;
+	height: 40px;
+	margin-top: 20px;
+
+}
+nav.panigation ul.pageing{
+	text-align: center;
+
+}
+nav.panigation ul.pageing  li{
+	list-style: none;
+	display: inline-block;
+	line-height: 40px;
+
+}
+nav.panigation ul.pageing  li.active a{
+	color:yellow;
+	text-decoration: underline;
+	font-weight: bolder;
+	background-color: red;
+
+}
+nav.panigation ul.pageing  li a{
+	text-decoration: none;
+	border-radius: 50% 50%;
+	background-color: black;
+	padding: 10px;
+	color:white;
+}

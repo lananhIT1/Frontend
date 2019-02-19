@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>demo form</title>
+</head>
+<body>
+    
+  <form>
+    họ và tên: <input type="text" id="name" class="do"/>
+    <br><br>
+    ngày sinh: <input type="text" id="date"  class="do"/>
+    giới tính: Nam <input type="radio" name="gender" id="nu"   value="Nam"> Nữ <input type="radio" name="gender" id="nu"  value="Nữ">
+    <button type="button" onclick="click1();">Đăng nhập</button>
+    <p id="thongtin"></p>
+</form>
+<script type="text/javascript">
+
+ function the(id){
+    var i=document.getElementById(id).value;
+    return i;
+  };
+function click1(){
+  var z= document.getElementsByClassName("do");
+  var dem=0;
+  for(var i=0;i< z.length;i++){
+    if(z[i].value=='')
+    {
+      document.getElementsByClassName('do')[i].style.border='1px solid red';
+    }
+    else{
+      dem++;
+    }
+  }
+  if(dem==z.length){
+    var kq="";
+      var a= the('name');
+      var b=the('date');
+      var checkbox = document.getElementsByName("gender");
+      for (var j = 0; j < checkbox.length; j++){
+                    if (checkbox[j].checked === true){
+                        var c= checkbox[j].value;
+                    }
+      }
+      
+      kq="Xác nhận lại thông tin <br>";
+      kq= kq + " Tên đăng nhập : "+ a +"<br>";
+      kq= kq+ "mật khẩu: " + b;
+      kq+="<br> giới tính " +c;
+  
+      document.getElementById('thongtin').innerHTML=kq;
+  }
+
+  };
+ 
+
+</script> 
+<!--<form>
+  Tên đăng nhập: <input type="text" id="name" class="trong">
+  Mật khẩu: <input type="password" id="password" class="trong">
+  <button type="button" id="btn" onclick="click1();">Đăng nhập  </button>
+</form>
+<script type=" text/javascript">
+function giatri(id){
+    var i=document.getElementById(id).value;
+    return i;
+};
+  function click1(){
+      var a=document.getElementsByClassName('trong');
+      for(var j=0;j<a.length;j++){
+        if(a[j].value==''){
+          a[j].style.border='1px solid red';
+        }
+      }
+      
+  };-->
+</script>
+</body>
+</html>

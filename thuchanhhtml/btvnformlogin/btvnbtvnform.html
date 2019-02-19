@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo form login</title>
+	<script type="text/javascript" src="btvnform.js"></script>
+	<style type="text/css">
+		*{
+  padding:0;
+  margin:0;
+  border:0;
+}
+div.form{
+  width:400px;
+  height:300px;
+  border:1px solid green;
+  box-shadow:3px 2px 4px #868686;
+  background-color:#E8E8E8;
+}
+div.form input{
+  border:1px solid black;
+  border-radius: 3px;
+  width:200px;
+  height:20px;
+}
+div.form button{
+  background-color:green;
+  color:white;
+  border-radius:5px;
+  border:1px solid black;
+  height:30px;
+}
+td{
+  padding:10px;
+}
+table{
+  width:400px;
+}
+	</style>
+}
+</head>
+<body>
+	
+  <div class="form">
+    <form>
+      <table>
+        <tr>
+        <td></td>
+        <td>giai phương trình bậc hai</td>
+        </tr>
+        <tr>
+          <td colspan="2"><p id="nhaplai"></p></td>
+        </tr>
+        <tr>
+          <td>Nhap he so a</td>
+          <td><input type="text" id="hesoa"></td>
+        </tr>
+        <tr>
+          <td>Nhap he so b</td>
+          <td><input type="text" id="hesob"></td>
+        </tr>
+        <tr>
+          <td>Nhap he so c</td>
+          <td><input type="text" id="hesoc"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="button" onclick="giai()">giai phuong trinh</button>
+            <button type="button" onclick="xoa()" >xoa</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><p id="ketqua"></p></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>

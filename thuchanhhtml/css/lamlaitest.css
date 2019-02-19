@@ -1,0 +1,265 @@
+*{
+	margin:0;
+	padding:0;
+	border: 0;
+}
+body{
+	font-family: tahoma;
+}
+header{
+	width:100%;
+	height:70px;
+}
+
+ h1{
+	font-size: 30px;
+	color:blue;
+	margin-left:60px;
+	padding-top:0px;
+}
+h2{
+	font-size: 25px;
+	color:green;
+	padding-left:10px;
+}
+h3{
+	font-size: 20px;
+	color:red;
+}
+td.icon{
+	padding-left:100px;
+}
+div.header-2{
+	width:60%;
+}
+div.link{
+	width:20%;
+	
+}
+table ul{
+	list-style: none;
+
+}
+table ul li{
+	display: inline;
+}
+ header table img{
+	width:20px;
+	height:20%;
+	padding-top:15px;
+}
+nav{
+	width:100%;
+	height:35px;
+	background-color: green;
+}
+/*div.nav{
+	height:35px;
+	width:90%;
+	margin:0px 5%;
+	
+}*/
+nav table{
+	margin:0 5%;
+}
+div.nav-1,div.nav-2{
+	float:left;
+	height:35px;
+}
+.nav-1{
+	width:80%;
+	
+}
+.nav-2{
+	width:20%;
+	
+}
+nav ul li{
+	list-style: none;
+	display:inline-block;
+	line-height:35px;
+	
+	position:relative;
+}
+nav table tr td>ul>li{
+	margin-right:10px;
+}
+nav table tr td:nth-child(2){
+	padding-left:100px;
+}
+nav ul li a{
+	color:white;
+	text-decoration: none;
+}
+nav ul.submenu{
+	display:none;
+	position:absolute;
+	top:35px;
+	left:0;
+	background-color: green;
+	width:130px;
+}
+nav ul li ul.submenu li a{
+	color:white;
+}
+nav ul li:hover{
+	background-color: white;
+
+}
+nav ul li:hover a{
+	color:green;
+}
+nav ul.submenu li{
+	display:block;
+}
+nav ul li:hover ul.submenu{
+	display:block;
+}
+nav ul li ul.submenu li:hover a{
+	color:green;
+}
+div.banner img{
+	width:100%;
+	height:200px;
+}
+/*div.dongtrong,div.dongtrong1,div.dongtrong2{
+	
+	height:25px;
+}
+div.dongtrong{
+	width:100%;
+}
+.dongtrong1{
+	width:70%;
+	margin-left: 5%;
+}
+.dongtrong1 p{
+	margin-left: 5%;
+}
+.dongtrong2{
+	width:30%;
+}
+div.dongtrong1,div.dongtrong2{
+	float:left;
+}*/
+div.dongtrong ul li{
+	display:inline;
+}
+div.dongtrong img{
+	width:30px;
+	height:20px;
+}
+div.dongtrong ul{
+	padding-left:700px;
+}
+div.dongtrong ul li:first-child img{
+	margin-top:-10px;
+}
+div.dongtrong ul li:nth-child(2) img,div.dongtrong ul li:nth-child(3) img{
+	padding-top: 0px;
+}
+main{
+	width:100%;
+	height:800px;
+
+}
+main table{
+	margin:0px 5%;
+}
+/*main div.container{
+	width:90%;
+	padding-top: 0px;
+	padding-left:5%;
+	padding-right: 0%;
+}*/
+/*main div.container div.card{
+	width:100%;
+	height:50%;
+	margin:0px 6%;
+}
+main div.container div.card div.card-1{
+	width:25%;
+	margin-right:6%;
+	/*border:1px solid red;*/
+	/*float:left;
+}*/
+main img{
+	width:350px;
+	height:250px;
+}*/
+footer{
+	width:100%;
+	
+
+
+}
+footer div.footer-1{
+	width:100%;
+	height:200px;
+	background-color: green;
+}
+footer div.footer-1 div.logo{
+	background-color: white;
+	width:90%;
+	margin:0px 5%;
+	height:55px;
+}
+/*footer div.logo ul li{
+	display:inline;
+	list-style: none;
+	margin-right:4%;
+
+}
+footer div.logo ul li {
+		text-decoration: none;
+		color:green;
+		font-size: 25px;
+}*/
+div.logo img{
+	width:100%;
+	height:55px;
+}
+footer div.ds{
+	padding-top:15px;
+	width:90%;
+	margin:0px 5%;
+}
+footer table ul li{
+	display:block;
+}
+footer table{
+	margin:0 5%;
+}
+footer table tr td{
+	padding-right:20px;
+}
+footer div.ds1{
+	width:20%;
+	float:left;
+}
+footer div.ds2{
+	width:40%;
+	float:left;
+}
+footer/* div.ds1 ul,div.ds2*/ footer-1 ul{
+	list-style-position:inside;
+}
+footer /*div.ds2*/ div.footer-1 p{
+	text-align: right;
+}
+footer div.footer-2{
+	background-color:#66FF99;
+	width:100%;
+	height:40px;
+}
+footer /*div.ds2*/ span{
+	color:white;
+}
+div.footer-2 p{
+	margin-left:50px;
+}
+
+
+
+
+

@@ -1,0 +1,157 @@
+*{
+	padding:0;
+	border:0;
+	margin:0;
+}
+body{
+	font-size:20px;
+	font-family: tahoma;
+}
+header{
+	width:100%;
+	height:551px;
+	background: url('../images/images2.jpg') no-repeat;
+	background-size: 100% 551px;
+}
+a{
+	text-decoration: none;
+}
+header nav{
+	width:100%;
+	height:35px;
+	background-color: #DAA74C;
+	position: fixed;
+}
+header .nav1{
+	padding-top: 60px;
+}
+header nav ul{
+	text-align: center;
+	padding-top:5px;
+}
+header nav ul li,header ul li{
+	display:inline-block;
+	list-style: none;
+}
+header nav ul li a{
+	color:white;
+	margin-right:12px;
+	font-size: 12px;
+	letter-spacing: 4px;
+	font-weight: bold;
+	transition: color .2s ease-in-out;
+}
+nav ul li a:active{
+	 background-color: transparent !important;
+}
+/*header nav ul li a:visited {
+	color:#B74D06;
+}*/
+
+
+ul li.current a { color: #F06000; }
+header div.nav1 h1{
+	text-align: center;
+	font-size: 80px;
+	color:white;
+}
+header div.h3 {
+	width:650px;
+	height:186px;
+	padding:10px 23%;
+
+}
+header div.h3 p{
+	text-align: center;
+	color:#252130;
+	line-height:30px;
+}
+header div.h3 span a,header ul.icon li a{
+		color:white;
+}
+
+header ul.icon{
+	text-align: center;
+}
+header ul.icon li a{
+	font-size: 30px;
+}
+header ul.icon li{
+	margin-right:25px;
+	line-height: 18px;
+}
+header p.fa{
+	padding-left:50%;
+	padding-top:50px;
+}
+header p.fa a{
+	color:white;
+	font-size: 50px;
+	-webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+header p.fa a:hover{
+	color: #11ABB0;
+}
+#about1,#resume,#myquote,#work{
+	width:980px;
+	margin:0 auto;
+}
+#about {
+	width:100%;
+	height:474px;
+	background-color: #2B2B2B;
+	margin-top:-2px;
+}
+
+ div.left, div.left2{
+	float:left;
+}
+ #about div.left{
+	height:474px;
+}
+div.left{
+	width:30%;
+}
+div.left2{
+	width:70%;
+}
+#about div.left2{
+	height:474px;
+}
+#about div.left img{
+	width:180px;
+	height:180px;
+	padding-top:100px;
+}
+#about div.left2 h4{
+	padding-top:50px;
+	color:white;
+}
+#about div.left2 p{
+	color:#656565;
+	padding-top:20px;
+	line-height: 35px;
+}
+#about div.left2 p span a{
+	color:white;
+}
+div.education{
+	width:100%;
+	height:316px;
+}
+#resume div.education div.left h3{
+	padding-top:100px;
+}
+ #resume div.education div.left2 h3{
+ 	padding-top:40px;
+ }
+#resume div.education div.left2{
+	padding-top: 40px;
+}
+#resume div.education
+{
+	border-bottom:1px solid #ccc;
+}

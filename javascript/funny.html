@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funny Ghost</title>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet"  type="text/css" href="css/bootstrap.css">
+	<style type="text/css">
+		#mainGhost,#audGhost{
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="container" id="searchInfor">
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+			<h3 class="text-center">tìm sự khác biệt giữa hai bức tranh</h3>
+			<p id="time" class="text-center"></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-6">
+			<img class="img-fluid" src="images/anh2.jpg" alt="">
+		</div>
+		<div class="col-lg-6 col-md-6">
+			<img class="img-fluid" src="images/anh2.jpg" alt="anh">
+		</div>
+	</div>
+</div>
+<div class="container-fluid" id="mainGhost">
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+			<img class="img-fluid" src="images/ghost.jpg" alt="ghost">
+		</div>
+		<div class="col-lg-12 col-md-12">
+			<audio id="audGhost" src="audios/cmnq.mp3" autobuffer autoloop loop controls></audio>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	let time=0;
+	let countTime;
+	$(function(){
+		countTime=setInterval(function(){
+			time+=1;
+			//hienthi thoi gian
+			$('#time').html(time);
+			if(time ==3){
+				//hienthi hinh ghost
+				//an đi hfnh ảnh tìm sự khác biệt
+				$('#mainGhost').show('fast');
+				$('#searchInfor').hide('fast');
+
+				//ngùn dem thoi gian
+				clearInterval(countTime);
+				//tu dong phat audio
+				$('#audGhost')[0].play();
+			}
+		},1000);
+	});
+</script>
+</body>
+</html>

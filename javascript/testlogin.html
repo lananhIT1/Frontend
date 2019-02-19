@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+</head>
+<body>
+<div class="container">
+	<form id="frmLogin">
+		<div class="form-group">
+			<label for="user">user</label>
+			<input type="text" name="user" id="user">
+			<p class="error" id="errUser"></p>
+		</div>
+		<div class="form-group">
+			<label for="pass">password</label>
+			<input type="password" name="pass" id="pass">
+			<p class="error" id="errPass"></p>
+		</div>
+		<button type="button" id="login" class="btn">lOGGIN</button>
+	</form>
+</div>
+<br>
+<br>
+
+</form>
+<script type="text/javascript">
+
+	//bat su kien nguoi dung bam nut login
+	document.getElementById('login').onclick=function(){
+		//lay duoc thong tin nguoi dung nhap vao 2 o text là user và pass
+		let user=document.getElementById('user').value;
+		let pass=document.getElementById('pass').value;
+		console.log(pass);
+		let chkUser=null;
+		let chkPass=null;
+		if(user==''){
+			chkUser=false;
+			//thong bao loi o text
+			document.getElementById('user').style.border='1px solid red';
+			document.getElementById('errUser').innerHTML='ban vui long nhap user name';
+
+		}else{
+			chkUser=true;
+			document.getElementById('user').style.border='';
+			document.getElementById('errUser').innerHTML='';
+
+		}
+		if(pass==''){
+			chkPass=false;
+			//thong bao loi o text
+			document.getElementById('pass').style.border='1px solid red';
+			document.getElementById('errPass').innerHTML='ban vui long nhap pass';
+
+		}else{
+			chkPass=true;
+			document.getElementById('pass').style.border='';
+			document.getElementById('errPass').innerHTML='';
+
+		}
+		if(chkUser&&chkPass){
+			// document.getElementById('frmLogin').submit();
+			window.location.href='index3.html';
+		}
+		else{
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

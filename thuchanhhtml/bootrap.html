@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap1.css">
+	<style type="text/css">
+		 div.container-fluid  div[class*="row"] :first-child{
+			background-color: red;
+		}
+		div.container-fluid div[class*="row"] :nth-child(2){
+			background-color: yellow;
+		}
+		div.container-fluid div[class*="row"] :last-child{
+			background-color: orange;
+		}
+		
+		div.container-fluid{
+			width: 100%;
+			background-color: violet;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="container-fluid">
+		<div class="row">
+  			<div class="col-12 col-md-8">.col-12 .col-md-8</div>
+  			<div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        </div>
+    </div>
+	<div class="container-fluid">
+  		<div class="row justify-content-start">
+    		<div class="col-4">
+      			One of two columns
+    		</div>
+   	    	<div class="col-4">
+      			One of two columns
+    			</div>
+    	</div>
+    </div>
+    <div class="container-fluid">	
+    	<div class="row no-gutters">
+  			<div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+  			<div class="col-6 col-md-4">.col-6 .col-md-4</div>
+		</div>
+    </div> -->
+    <div class="container-fluid">	
+    	<div class="row">
+  			<div class="col-9">.col-9</div>
+  			<div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+  			<div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+		</div>
+    </div>
+</body>
+</html>

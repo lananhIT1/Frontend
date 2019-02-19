@@ -1,0 +1,113 @@
+*{
+	margin:0;
+	padding:0;
+}
+div.container :first-child {
+	color:red /*!important*/;/* !important : ưu tiên chạy*/
+}
+/*tác động vào con đầu tiên*/
+div.container :first-of-type{
+	color:blue;
+}
+/*quan tâm đến loại con đầu tiên 2 selector trên ngang cấp*/
+div.container :last-child{
+	color:green;
+}
+/*thành phần con cuối cùng*/
+div.container :last-of-type{
+	color:yellow;
+}
+/*loại con cuối cùng*/
+div.container :nth-last-child(2){
+	color:pink;
+}
+/*thành phần con thứ n từ dưới lên*/
+div.container :nth-last-of-type(2){
+	color:violet;
+}
+div.container :nth-child(3)
+{
+	color:orange;
+}
+/*thành phần con thứ n từ trên xuống*/
+div.container :nth-of-type(3){
+	color: gray;
+}
+div.box :only-child{
+	color:red;
+}
+/*chỉ chứa 1 con duy nhất*/
+div.box input[name='username']:focus{
+	border: 1px solid red;
+	width: 500px;
+	height: 25px;
+}
+/* focuss thường dùng với input*/
+div.box input[type~='checkbox']:checked, input[type~='radio']:checked{
+	width: 200px;
+	height: 200px;
+}
+div.link a:hover{
+	color:red;
+	text-decoration: none;
+}
+div.link a:active{
+	color:green;
+}
+/*div.link a:visited{
+	color:pink;
+}*/
+div.link a:link{
+	color:yellow;
+}
+div.content p::first-letter{
+	font-size: 50px;
+	color: red;
+}
+/* first letter ưu tiên*/
+div.content p::first-line{
+	color: blue !important;
+}
+div.content p::before{
+	/*content: url('images/yoona2.jpg');*/
+	content: 'LPHP';
+}
+	
+div.content p::after{
+	content: 'javascript';
+}
+div.content textarea[class='text']::selection{
+	color:violet;
+}
+/*áp dụng vs thẻ input*/
+p{
+	font-style: italic;
+	text-indent: 400px;
+	text-decoration: 
+
+}
+h3{
+	text-shadow: green 10px 5px 2px;
+}
+div.background{
+	width: 800px;
+	height: 500px;
+	border: 1px solid red;
+	/*tạo màu nền*/
+	/*background-color: violet;*/
+	/* ảnh nền*/
+	background-image: url('../images/anh1.jpg');
+	/*quy định độ lặp của hình nền*/
+	/*background-repeat: no-repeat;*/
+	/*cách hiển thị của hình nền*/
+	/*background-position: center center;*/
+	/*thiết lập lại kích thước của hình nền*/
+	/*/* 300px 400px*/
+	/*background-attachment: fixed;
+	*/
+
+	/*background: violet url('images/anh1.jpg') no-repeat center fixed scroll;
+	background-size: cover;*//* b*//*ackfroound size ko viết tắt đc*//**/*/
+}
+
+

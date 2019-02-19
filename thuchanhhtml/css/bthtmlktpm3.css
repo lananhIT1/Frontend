@@ -1,0 +1,16 @@
+*{
+	margin;0;
+	padding: 0;
+	border: 0;
+}
+body{
+	font-family: tahoma;
+	font-size: 16px;
+	background-color:#A06D21;
+	color:white;
+	background-image: url('../images/anh.jpg') ;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+}
+

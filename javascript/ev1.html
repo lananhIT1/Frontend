@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+
+<body onerror="myOnError();" onload="myOnLoad();"  onresize="myResize();">
+<button type="button" onclick="myclick('LPHP1808E');">click</button>
+<br>
+<input type="text" onblur="myBlur();" onfocus="myFocus();">
+<br>
+<input type="text" onchange="myChange(this);">
+<br>
+<select onchange="myChange2(this);">
+	<option value="0">nam</option>
+	<option value="1">nu</option>
+</select>
+<br>
+<button type="button" ondblclick="myDbClick(this);">click me</button>
+<input type="text" onkeydown="myKeyDown();" onkeypress="myKeyPress();" onkeyup="myKeyUp();">
+<br>
+<button type="button" onmousedown="myMouseDown();" onmouseup="myMouseUp();">mouse click</button><!-- onclick chỉ nhấp chuojt trái -->
+<br>
+<div style="width:200px; height:200px; border:1px solid red;" onmousemove="myMouseMove();"></div>
+<img src="images/anh.jpg" alt="anh" width="200px" height="200px" onmouseout="myMouseOut(this);" onmouseover="myMouseOver(this);">
+<textarea rows="5" cols="50" onselect="myOnSelect();"></textarea>
+<script type="text/javascript" >
+window.onbeforeunload=function(){
+	return "eixts";//hoi co muon tat trang ko
+}
+function myOnSelect(){
+	console.log('ban vua chon');
+}
+	function myResize(){
+		alert('cua so vua thay doi');
+	}
+	function myMouseUp(){
+		console.log('ban vua nha chuot ra');
+	}
+	function myMouseOut(ob){
+		
+		console.log('trang web dc tai hoan tat');
+	}
+	function myKeyDown(){
+		console.log('ban vua bam ban phim');
+	}
+	function myKeyPress(){
+		console.log('ban dang giu ban phim');
+	}
+	function myKeyUp(){
+		console.log('ban vua bo tay khoi ban phim');
+	}
+	function myOnError(){
+		console.log('loi trang');
+	}
+	function myMouseOver(ob){
+		ob.width=500;
+		ob.height=500;
+	}
+	 function myMouseOut(ob){ob.width=50;
+		ob.height=50;
+	}
+	function myMouseMove(){
+		console.log('chuot vua dc di chuyen');
+	}
+	function myMouseDown(){
+		console.log('ban vua bam chuot');
+	}
+	function myOnLoad(){
+		console.log('ban load het trang');
+	}
+function myDbClick(ob){
+	console.log(ob);
+}
+	function myChange2(ob){
+		let gender=ob.value;
+		if(gender==1){
+			console.log('ban la nu');
+		}else if(gender==0){
+			console.log('ban la nam');
+		}else{
+			console.log('ko xd');
+		}
+	}
+ 	function myChange(obj){
+ 		let valueText=obj.value;
+ 		console.log(valueText);
+ 	}
+	function myclick(name){
+		alert('hello world' + name);
+	}
+	function myBlur(){
+		console.log('this is action blur');
+	}
+	function myFocus(){
+		console.log('this is action focus');
+	}
+
+</script>
+
+</body>
+</html>

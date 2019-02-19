@@ -1,0 +1,220 @@
+*{
+	margin:0;
+	padding: 0;
+	border:0;
+}
+body{
+	font-family: time new roman;
+}
+div.container{
+	width:980px;
+	margin:auto;
+}
+header{
+	min-height: 80px;
+	background-color: #3B5998;
+	color:white;
+}
+header div.logo{
+	width: 576px;
+	float:left;
+}
+header /*div.login*/form{
+	width:404px;
+	float:left;
+	font-size: 14px;
+	margin-top:7px;
+	line-height: 20px;
+	display: inline;
+}
+div.login-1, div.login-2{
+	width: 166px;
+	float:left;
+}
+div.login-1 input, div.login-2 input{
+	width: 150px;
+	height:23px;
+	border:1px solid black;
+}
+div.login-2 a{
+	color:#6187BF;
+	text-decoration: none;
+}
+div.login-2 a:hover{
+	text-decoration: underline;
+}
+div.submit{
+	margin-top: 20px;
+}
+div.submit button{
+	width: 72px;
+	height:20px;
+	float:left;
+	background-color: #4267B2;
+	color:white;
+	border:1px solid black;
+
+}
+div.submit button:hover{
+	background-color: #3B5998;
+}
+h1{
+	margin-top: 20px;
+	font-size: 35px;
+	font-weight: bold;
+	
+}
+main{
+	min-height:620px;
+	background-color: #E9EBEE;
+}
+main div.main-left, main div.main-right{
+	float:left;
+
+}
+main div.main-left{
+	width: 576px;
+	float:left;
+}
+main div.main-right{
+	width: 404px;
+	float:left;
+	font-size: 23px;
+}
+main div.main-left{
+	margin-top:30px;
+}
+div.main-left h4{
+	font-size: 23px;
+}
+div.main-left-1{
+	width:550px;
+}
+ main div.main-right{
+	margin-top: 15px;
+}
+h2{
+	font-size: 38px;
+}
+div.container div.main-right p:nth-child(2){
+	margin-top: 9px;
+	font-size: 22px;
+
+}
+div.container div.main-right input{
+	border: 1px solid #BDC7D8;
+	border-radius: 5px;
+	height: 39px;
+	margin-top: 12px;
+	z-index: 0;
+}
+ div.container div.main-right input[name="ho"]{
+	width: 192px;
+	margin-top: 27px;
+}
+input[name="ten"]{
+	width: 192px;
+}
+input[name="sdt"],input[name="pass"] {
+	width: 388px;
+}
+div.container div.main-right input[name="gender"]{
+	margin-top: 0px;
+}
+select{
+	height:29px;
+	border: 1px solid #BDC7D8;
+}
+#date, #month, #year{
+	float:left;
+}
+div.hover span{
+	width: 200px;
+	height: 39px;
+	float:left;
+	font-size: 14px;
+	margin-top: 0px;
+	margin-left: 10px;
+	color:#3658A4;
+	position: relative;
+}
+main div.main-right div.hover div.position{
+	display: none;
+	width: 300px;
+	height:150px;
+	font-size: 14px;
+	position: absolute;
+	left:600px;
+	background-color: white;
+	z-index: 1;
+	box-shadow: 3px 3px 3px 3px #7789B5;
+	padding:10px;
+}
+
+main div.main-right div.hover span:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+main div.main-right div.hover span:hover + div.position{
+	display:inline;
+}
+div.main-right div.chumo{
+	color:#77778A;
+	font-size: 14px;
+	width: 312px;
+	margin-top: 10px;
+}
+div.main-right div.chumo a{
+	text-decoration: none;
+	color:#3658A4;
+}
+div.main-right div.chumo a:hover{
+	text-decoration:underline;
+}
+ main div.container div.main-right p:last-child{
+ 	font-size: 18px;
+ }
+ main div.container div.main-right p:last-child a {
+ 	color:#365899;
+ 	text-decoration: none;
+ }
+div.main-right div.dangki button{
+	width:193px;
+	height: 40px;
+	border-radius: 7px;
+	margin-top: 10px;
+	background-color: #5A8D46;
+	color:white;
+}
+footer{
+	font-size: 13px;
+}
+footer div.container div.ul-1{
+	width:100%;
+
+}
+footer div.container ul{
+	margin-top: 10px;
+}
+footer div.container ul li {
+	display:inline-block;
+	text-decoration: none;
+}
+footer div.container div.ul-1 li{
+	margin-right:13px;
+}
+footer div.container ul li a{
+text-decoration: none;
+color:#365899;
+}
+footer div.container div.khoangtrangul{
+	height:18px;
+}
+footer div.container div.ul-2 li{
+margin-right: 21px;
+}
+hr{
+	width: 100%;
+    height: 1px;
+    background-color: #E9EBEE;
+}

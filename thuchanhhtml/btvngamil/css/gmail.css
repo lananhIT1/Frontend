@@ -1,0 +1,269 @@
+
+*{
+	margin: 0;
+	padding:0;
+	border:0;
+}
+body{
+	font-family: "Helvetica";
+}
+nav{
+	width:100%;
+	height:60px;
+	background-color: white;
+	position:fixed;
+	/*z-index: 1;*/
+}
+nav div.logo{
+	width:13%;
+	height:60px;
+    /*margin-left:22px;*/
+    float:left;
+    color:#7B7B7B;
+    
+}
+nav div.logo a{
+	margin-left:22px;
+}
+
+div.logo {
+	font-size: 25px;
+	padding-top: 10px;
+	display: inline;
+	float:left;
+
+}
+div.left-2{
+	width:42%;
+	float:left;
+	/*background-color: green;*/
+	height:60px;
+	
+}
+ nav div.left-3,div.left-4,div.left-5{
+	float:left;
+	height:60px;
+}
+
+
+nav div.left-3{
+	width:15%;
+	/*background-color: blue;*/
+	color:red;
+}
+nav div.left-4{
+	width:15%;
+	/*background-color: pink;*/
+}
+nav div.left-5{
+	background-color: red;
+	width:15%;
+	color:white;
+	
+}
+ nav div.left-3 p ,div.left-4 p,nav div.left-5 p{
+	padding-top:20px;
+	text-align: center;
+}
+main div.image{
+	background-image: url('../images/laptop.jpg');
+	background-size: 100% 261px;
+	width:100%;
+	height:261px;
+}
+main div.chananh{
+	width:100%;
+	background-color:#DD5347 ;
+	height:244px;
+	position:relative;
+	margin-top:-4px;
+	/*z-index: 0;*/
+}
+
+main div.chananh  div.btn{
+	width: 225px;
+	height: 80px;
+	color:white;
+	border:1px solid white;
+	position: absolute;
+	top:80px;
+	left:80px;
+	/*background-color: green;*/
+}
+main div.chananh div.btn p{
+	padding-top: 27px;
+	padding-left: 79px;
+}
+main div.chananh div.title{
+	margin-left:380px;
+	padding-top: 45px;
+	width:550px;
+	height:244px;
+
+}
+main div.chananh div.title p{
+	font-size:42px;
+	color:white;
+	line-height:55px;
+	font-weight: 1px;
+}
+main div.par{
+	width:100%;
+	height:259px;
+	
+}
+main div.par p:first-child{
+	text-align: center;
+	padding-top: 78px;
+	font-size: 40px;
+	word-spacing: 10px;
+}
+main div.par p:last-child{
+	text-align: center;
+	font-size: 18px;
+	color:#676767;
+	word-spacing:4px;
+	padding-top: 10px;
+}
+main div.card{
+	height:460px;
+	width:100%;
+	margin-left:5px;
+}
+main div.card div.card-1,div.card-2, div.card-3,div.card-4{
+	width:255px;
+	height:392px;
+	float:left;
+	border:1px solid #BBBBBB;
+}
+main div.card div.card-1{
+	/*float:left;*/
+	margin-left: 90px;
+}
+main div.card div.card-2, div.card-3,div.card-4{
+	margin-left: 20px;
+}
+main div.card img{
+	width:255px;
+	height:141px;
+}
+main div.card-1 p:nth-child(2),main div.card-2 p:nth-child(2),main div.card-3 p:nth-child(2),main div.card-4 p:nth-child(2){
+	text-align: center;
+	padding-top: 30px;
+	color: #414141;
+	font-size: 22px;
+}
+main div.card-1 p:nth-child(3),main div.card-2 p:nth-child(3),main div.card-3 p:nth-child(3),main div.card-4 p:nth-child(3){
+	text-align: left;
+	padding-top: 33px;
+	padding-left: 27px;
+	color:#868686;
+
+}
+footer{
+	width: 100%;
+}
+ footer div.footer-1{
+	height:83px;
+	background-color:#F9F9F9;
+
+}
+footer div.footer-2{
+	height:3px;
+	
+}
+footer div.footer-2 div.bonmau{
+	width:136px;
+	height:3px;
+	margin-left: 1006px;
+	/*background-color: red;*/
+}
+footer div.footer-2 div.bonmau div.blue,footer div.footer-2 div.bonmau div.red,footer div.footer-2 div.bonmau div.orange,footer div.footer-2 div.bonmau div.green{
+	float:left;
+	width: 34px;
+	height:3px;
+}
+ footer  div.footer-2 div.blue{
+	background-color: blue;
+}
+ footer div.footer-2 div.red{
+	background-color: red;
+}
+ footer div.footer-2 div.orange{
+	background-color: orange;
+}
+ footer div.footer-2 div.green{
+	background-color: green ;
+}
+footer div.footer-3{
+	height:126px;
+}
+footer div.footer-3 ul li,footer div.footer-4 ul li{
+	display:inline-block;
+
+}
+footer div.footer-3 ul li a,footer div.footer-4 ul li a{ 
+	text-decoration: none;
+	margin-right: 5px;
+	color:blue;
+}
+footer div.footer-3 ul li a{
+	font-size:16px;
+}
+footer div.footer-3 ul,footer div.footer-4 ul{
+	margin-left: 119px;
+}
+footer div.footer-3 ul{
+	/*margin-left: 119px;*/
+	padding-top: 25px;
+}
+footer div.footer-3 ul:nth-child(2){
+	margin-left: 119px;
+	padding-top: 20px;
+}
+footer div.footer-3 ul li a img{
+	width:19px;
+	height:19px;
+}
+footer div.footer-4{
+	background-color: #F5F5F5;
+}
+footer div.footer-4 ul li a{
+	font-size: 13px;
+}
+footer div.footer-4 ul{
+	padding-top: 7px;
+}
+footer div.footer-4 div.footer-left,footer div.footer-4 div.footer-right{
+	width:50%;
+	float:left;
+}
+/*footer div.footer-4 div.footer-left{
+	background-color: red;
+}
+footer div.footer-4 div.footer-right{
+	background-color: violet;
+	display: inline;
+}*/
+footer div.footer-4 div.footer-right img{
+	width: 17px;
+	height:16px;
+	margin-left: 200px;
+	/*display: inline;*/
+	padding-top: 8px;
+}
+footer div.footer-4 div.footer-right select{
+	/*padding-left:200px;*/
+	border:1px solid black;
+	width:298px;
+	height:18px;
+	
+	/*margin-left: 200px;*/
+}
+
+footer div.footer-3 li a:visited,footer div.footer-4 li a:visited{
+	color:#551A8B;
+}
+footer div.footer-3 li a:active,footer div.footer-4 li a:active{
+	color:red;
+}

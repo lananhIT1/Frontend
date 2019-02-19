@@ -1,0 +1,59 @@
+*{
+	padding:0;
+	margin:0;
+	border:0;
+}
+header,section{
+	width:100%;
+	height:300px;
+}
+header{
+	background-color:red;
+	position:relative;}
+section#about{
+	background-color: yellow;
+}
+section#resume{
+	background-color: black;
+}
+section#myquote{
+	background-color: orange;
+}
+section#work{
+	background-color: blue;
+}
+header div#nav{
+	height:50px;
+	position: fixed;
+}
+header div#nav ul{
+	margin-left: 400px;
+
+
+}
+header div#nav ul li{
+	display: inline-block;
+	list-style: none;
+	padding-right:30px;
+	line-height: 50px;
+	text-align: center;
+}
+header div#nav ul li a{
+	text-decoration: none;
+	color:white;
+	-webkit-transition: color 5s ease;
+	-moz-transition: color 5s ease;
+	-o-transition: color 5s ease;
+	-ms-transition: color 5s ease;
+	transition: color 5s ease;
+}
+header div#nav ul li a:hover{
+	color:red;
+}
+header div#nav ul li a{
+
+}
+ header div#nav ul li.current a {
+ color: #F06000; 
+}
+

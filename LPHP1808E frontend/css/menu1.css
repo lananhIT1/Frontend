@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/*css dung chung*/
+body{
+	font-family: tahoma;
+	font-size: 18px;
+}
+nav ul li{
+	list-style: none;
+
+}
+nav ul li a{
+	text-decoration: none;
+}
+/*css menu*/
+nav{
+	width: 250px;
+	border: 1px solid #ccc;
+	margin: 10px 0px 0px 20px;
+	background-color: yellow;
+}
+nav ul li{
+	padding: 12px;
+	border-bottom: 1px solid red;
+	position: relative;
+}
+nav ul li:last-child{
+	border:none;
+}
+nav ul li:hover{
+	background-color: black;
+	
+}
+nav ul li:hover a{
+	color:white;
+}
+nav ul li:nth-child(2) {
+	background-color: black;
+	color:white;
+}
+nav ul li:nth-child(2) a{
+	color:white;
+}
+/* css sub menu*/
+nav ul.dropdown li ul.sub-menu{
+	display:none;
+	position: absolute;
+	background-color: #33FFCC;
+	left:250px;
+	width: 250px;
+	top:0px;
+}
+nav ul.dropdown li:hover ul.sub-menu{
+	display: block;
+}
+nav ul.dropdown li ul.sub-menu li:hover{
+	background-color: black;
+}
+nav ul.dropdown li ul.sub-menu li:hover a{
+	color:red;
+}
+nav ul.dropdown li ul.sub-menu li{
+	background-color: #33FFCC;
+}
+nav ul.dropdown li ul.sub-menu li{
+	border-left: 1px solid black;
+}
+nav ul li:hover ul.submenu{
+	display: block;
+}
+
+

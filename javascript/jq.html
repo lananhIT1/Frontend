@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo jq</title>
+	<!--có 2 cách cơ bản để sử dụng thư viện jq vào website-->
+	<!-- cai dat trực tuyến-->
+	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+	<!--cài đặt nội bộ-->
+	<script type="text/javascript"  src="js/jquery-3.3.1.min.js"></script>
+	<!-- sau nay thu vien jq nen duoc nhúng đầu tiwwn nhất trước tất cả các file js khác -->
+	<style type="text/css">
+		.error{
+			border:1px solid red;
+		}
+		.success{
+			border:1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+<button type="button">click me</button>
+<br>
+<select class="gender">
+	<option value="1">Nam</option>
+	<option value="0">Nữ</option>
+	<option value="-1">ko xđ</option>
+</select>
+<h1 id="10" class="title">this is JQ</h1>
+<input type="button" name="btnClick" value="Click me 2">
+<br>
+<img src="images/anh.jpg" alt="anh" width="200px" height="200px">
+<br>
+<input type="text" name="email" id="email">
+<button type="button" id="check">check</button>
+<div class="content">
+	
+</div>
+<br>
+<ul>
+	<li><a href="#">Home</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Contact</a></li>
+	<li><a href="#">Document</a></li>
+	<li><a href="#">infor</a></li>
+</ul>
+<br>
+<input type="checkbox" name="checkbox">
+<br>
+<div class="box-2">
+	<h4>this is box-2</h4>
+</div>
+<div class="nav">
+	<nav>
+		<section>
+			<h3>this is test</h3>
+		</section>
+	</nav>
+</div>
+<div class="box">
+	<h4>this is box-3</h4>
+</div>
+<br>
+<p id="data"></p>
+<h6>fdgh</h6>
+<textarea  id="textdata" cols="45" rows="5"></textarea>
+<script type="text/javascript">
+	$(function(){
+		$('#textdata').keyup(function(){
+			let dt=$(this).val().trim();
+			// $('#data').html(dt);
+			$('#data').text(dt);//text có tham số thì lấy gt ms
+			let t=$('h6').html();
+			let t2=$('h6').text();//ko có tham số thì set lại gt cũ
+			console.log(t,t2);
+		});
+		//ham khởi tạo
+		//hàm này chờ cho các DOM HTML được load xong-dung xong thì các mã lệnh js nằm trong hàm này mới được thực thi
+		//bat su kiện click cho nút click me
+		//sau này tất cả các mã lệnh viết theo thư viện jq đều được đặt trong này
+		//$~jQuery
+		$('button[type="button"]').click(function(){
+			//alert('hello word');
+			// button[type="button"] selector jquery-chính là selector css
+			 //let id=document.getElementById('10').id;
+			 let id=$('#10').attr('id');//attr: attribute: lấy ra giá trị của thuộc tính
+			console.log(id);
+			let id2=$('#10').prop('id');//prop giống attr nhưng khác áp dụng vs phiên bản jq khác nhau
+			console.log(id2);
+			//document.getElementsByTagName('input')[0].setAttribute('type','text');
+			$('input[name="btnClick"]').attr('type','text');//attr:gán gt 1 cho gt 2
+
+		});
+		$('input[type="button"]').click(function(){
+			$('img').removeAttr('src');//xóa đi 1 thuộc tính nào đó của thẻ html
+		});
+		$('select[class="gender"]').change(function(){//alert('abc');
+			//let gender=$(this).val();//val(): lấy gt trống value va chỉ lm việc vs các thẻ input
+			//alert(gender);
+			$('h1#10').toggleClass('title');//ktra phần tử có class hay ko.nếu có thì xóa.nếu ko có thì thêm
+			if($('h1#10').hasClass('title')){
+				console.log('Y');
+			}else{
+				console.log('N');
+			}
+			
+		});
+		$('input[name="btnClick"]').click(function(){
+			if($('h1#10').hasClass('title')){
+				$('img').removeAttr('src');
+
+			}else{
+				$('img').attr('src','images/anh2.jpg');
+			}
+		});
+		$('#check').click(function(){
+			let email=$('#email').val().trim();//trim(): xóa đi khoảng trắng
+			if(/*email.length&&*/ email!=''){
+				//khong rong-trả về true-có nhập giữ liệu
+				$('#email').removeClass('error');
+				$('#email').addClass('success');
+			}
+
+			else{
+				//khong nhap du lieu 
+				$('#email').removeClass('success');
+				$('#email').addClass('error');
+			}
+			// $('.content').css('width','300px');
+			// $('.content').css('height','300px');
+			// $('.content').css('border','1px solid red');//vẫn viết dc dấu gạch ngang vd margin-bottom
+			//single css
+			//multy css
+			$('.content').css({
+				width: '300px',
+				height: '300px',
+				backgroundColor:'yellow',//ko dùng dấu gạch ngang giữa background
+				border: '1px solid red',
+				padding:'10px'
+			});
+			let wBox=$('.content').width();//ko lấy kích thước đường viền và padding
+			let hBox=$('.content').height();
+			console.log(wBox,hBox);
+			let innerH=$('.content').innerHeight();// ko lấy kích thức đường viền nhưng lấy padding
+			let innerW=$('.content').innerWidth();
+			console.log(innerW,innerH);
+			$('.content').width(500);
+			$('.content').height(500);
+			let wBox2=$('.content').width();
+			let hBox2=$('.content').height();
+			console.log(wBox2,hBox2);
+			$('ul a').eq(2).css('color','red');
+			if($('input[type="checkbox"]').is(':checked')){
+				console.log('Y');
+			}else{
+				console.log('N');
+			}
+
+
+			$('div.nav').find('h3').css('color','blue');
+			$('div.nav').next().css({
+				width:'200px',
+				height:'200px',
+				border: '1px solid red'
+			});
+			$('div.nav').prev().css({
+				width:'200px',
+				height:'200px',
+				border: '1px solid red'
+			});
+			$('nav').parent().css({//parent:cha
+				width:'200px',
+				height:'200px',
+				border: '1px solid red'
+			});
+
+		})
+		
+
+
+	});
+</script>
+</body>
+</html>
